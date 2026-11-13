@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 520">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16265c"/><stop offset="1" stop-color="#081130"/></linearGradient>
+    <linearGradient id="fig" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4170ff"/><stop offset="1" stop-color="#3fd6ff"/></linearGradient>
+  </defs>
+  <rect width="440" height="520" fill="url(#bg)"/>
+  <circle cx="220" cy="190" r="78" fill="url(#fig)" opacity="0.9"/>
+  <path d="M70 520c0-95 67-170 150-170s150 75 150 170z" fill="url(#fig)" opacity="0.9"/>
+  <text x="220" y="430" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle" opacity="0.9">Your photo here</text>
+  <text x="220" y="456" font-family="Arial, sans-serif" font-size="14" fill="#dfe5fb" text-anchor="middle" opacity="0.8">Save it as images/profile.jpg</text>
+</svg>

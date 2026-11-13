@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal academic portfolio of [Your Full Name], a student at MIVA Open University.">
+  <title>Home | [Your Full Name] — Student Portfolio</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header and navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">YN</span>
+        <span class="brand-text">[Your Name]</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Toggle menu</span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-sm">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">COS 106 · MIVA Open University</p>
+          <!-- EDIT: replace [Your Full Name] with your name -->
+          <h1>Hi, I'm <span class="text-gradient">[Your Full Name]</span>.</h1>
+          <p class="lead">
+            Welcome to my student portfolio. Here you can learn about my studies,
+            explore projects I have built, and use the academic planner I created
+            to keep coursework on track.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="projects.html">View my projects</a>
+            <a class="btn btn-ghost" href="planner.html">Open the planner</a>
+          </div>
+          <ul class="hero-facts" aria-label="Quick facts">
+            <li><strong>[Your Programme]</strong><span>Programme</span></li>
+            <li><strong>[Level / Year]</strong><span>Current level</span></li>
+            <li><strong>[City, Country]</strong><span>Location</span></li>
+          </ul>
+        </div>
+
+        <figure class="hero-photo reveal">
+          <!-- EDIT: save your photograph as images/profile.jpg — it replaces the placeholder automatically -->
+          <img src="images/profile.jpg"
+               onerror="this.onerror=null;this.src='images/profile-placeholder.svg';"
+               alt="Portrait of [Your Full Name]" width="440" height="520">
+          <figcaption class="photo-badge"><span class="dot" aria-hidden="true"></span> Open to learning opportunities</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Biography ===== -->
+    <section class="section" aria-labelledby="bio-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow eyebrow-dark">Biography</p>
+          <h2 id="bio-title">A little about me</h2>
+        </div>
+        <div class="prose reveal">
+          <!-- EDIT: replace this placeholder biography with 2–3 short paragraphs about yourself -->
+          <p>
+            [Write a short introduction here: who you are, what you are studying at
+            MIVA Open University, and what got you interested in computing.]
+          </p>
+          <p>
+            [Add a second paragraph about what you enjoy learning, the kind of
+            problems you like solving, and what you hope to achieve this year.]
+          </p>
+          <a class="text-link" href="about.html">Read my full profile <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Site overview cards ===== -->
+    <section class="section section-alt" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Explore</p>
+          <h2 id="explore-title">What you'll find on this site</h2>
+        </div>
+        <ul class="card-grid">
+          <li class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/></svg>
+            </div>
+            <h3>About me</h3>
+            <p>My education, career goals, technical skills, hobbies and current courses.</p>
+            <a class="text-link" href="about.html">Visit page <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5Zm2 0v4h14V5H5Zm0 6v8h14v-8H5Z"/></svg>
+            </div>
+            <h3>Projects</h3>
+            <p>Sample web projects with screenshots, descriptions and links.</p>
+            <a class="text-link" href="projects.html">Visit page <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm-2 8h14v10H5V10Zm5.3 7.7-2.8-2.8 1.4-1.4 1.4 1.4 4.2-4.2 1.4 1.4-5.6 5.6Z"/></svg>
+            </div>
+            <h3>Academic planner</h3>
+            <p>Add study tasks, tick them off and delete them. Tasks are saved in your browser.</p>
+            <a class="text-link" href="planner.html">Visit page <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 3.2V18h16V7.2l-8 5-8-5ZM5.2 6 12 10.2 18.8 6H5.2Z"/></svg>
+            </div>
+            <h3>Contact</h3>
+            <p>A validated contact form and other ways to reach me.</p>
+            <a class="text-link" href="contact.html">Visit page <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section class="cta-band">
+      <div class="container cta-inner reveal">
+        <div>
+          <h2>Let's work or study together</h2>
+          <p>Have a question, a group project idea or feedback on my work? I'd like to hear from you.</p>
+        </div>
+        <a class="btn btn-light" href="contact.html">Get in touch</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">YN</span><span class="brand-text">[Your Name]</span></a>
+        <p class="footer-note">COS 106 Introduction to Web Technologies term project, MIVA Open University.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">GitHub repository</a></li>
+        <li><a href="https://miva.university" target="_blank" rel="noopener">MIVA Open University</a></li>
+      </ul>
+    </div>
+    <p class="container copyright">© <span class="js-year">2026</span> [Your Full Name]. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

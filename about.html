@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Education, career aspirations, skills and interests of [Your Full Name].">
+  <title>About | [Your Full Name] — Student Portfolio</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">YN</span>
+        <span class="brand-text">[Your Name]</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Toggle menu</span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-sm">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container page-hero-inner reveal">
+        <p class="eyebrow">About me</p>
+        <h1>Learning to build for the web, one page at a time.</h1>
+        <p class="lead">My education, where I want my career to go, the skills I am developing and what I enjoy outside class.</p>
+        <nav class="chip-nav" aria-label="On this page">
+          <a href="#education">Education</a>
+          <a href="#career">Career goals</a>
+          <a href="#skills">Skills</a>
+          <a href="#courses">Courses</a>
+          <a href="#interests">Interests</a>
+          <a href="#audio">Audio intro</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow eyebrow-dark">Educational background</p>
+          <h2 id="education-title">Education</h2>
+          <p class="muted">Most recent first. Edit each entry with your own details.</p>
+        </div>
+        <!-- EDIT: replace each placeholder entry with your real education history -->
+        <ol class="timeline reveal">
+          <li>
+            <span class="timeline-date">[Start year] – Present</span>
+            <h3>[Degree, e.g. B.Sc. Computer Science]</h3>
+            <p class="timeline-place">MIVA Open University</p>
+            <p>[One or two sentences about your programme and current focus.]</p>
+          </li>
+          <li>
+            <span class="timeline-date">[Year] – [Year]</span>
+            <h3>[Secondary school certificate]</h3>
+            <p class="timeline-place">[School name, City]</p>
+            <p>[Subjects or highlights you want to mention.]</p>
+          </li>
+          <li>
+            <span class="timeline-date">[Year]</span>
+            <h3>[Optional: course, certificate or training]</h3>
+            <p class="timeline-place">[Provider]</p>
+            <p>[Delete this entry if it does not apply to you.]</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Career aspirations ===== -->
+    <section class="section section-alt" id="career" aria-labelledby="career-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Career aspirations</p>
+          <h2 id="career-title">Where I'm heading</h2>
+          <p class="muted">[Write one sentence summarising the career you are working towards.]</p>
+        </div>
+        <ul class="card-grid card-grid-3">
+          <li class="card reveal">
+            <span class="card-step">Short term</span>
+            <h3>[Goal for this year]</h3>
+            <p>[e.g. complete my first-year courses and publish this portfolio.]</p>
+          </li>
+          <li class="card reveal">
+            <span class="card-step">Medium term</span>
+            <h3>[Goal for the next 2–3 years]</h3>
+            <p>[e.g. an internship or a role you want to try.]</p>
+          </li>
+          <li class="card reveal">
+            <span class="card-step">Long term</span>
+            <h3>[Your career ambition]</h3>
+            <p>[The kind of work and impact you hope to have.]</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Technical skills ===== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Technical skills</p>
+          <h2 id="skills-title">Skills I'm building</h2>
+          <p class="muted">Keep the ones that apply to you and add your own.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3>Web development</h3>
+            <ul class="tag-list">
+              <li>HTML5</li>
+              <li>CSS3 (Flexbox &amp; Grid)</li>
+              <li>JavaScript</li>
+              <li>Responsive design</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Tools</h3>
+            <ul class="tag-list">
+              <li>Git &amp; GitHub</li>
+              <li>VS Code</li>
+              <li>Browser DevTools</li>
+              <li>[Add a tool]</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Other skills</h3>
+            <ul class="tag-list">
+              <li>[e.g. Microsoft Office]</li>
+              <li>[e.g. Problem solving]</li>
+              <li>[e.g. Teamwork]</li>
+              <li>[Add a skill]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Current courses (table) ===== -->
+    <section class="section section-alt" id="courses" aria-labelledby="courses-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Academic record</p>
+          <h2 id="courses-title">Current semester courses</h2>
+          <p class="muted">Replace the placeholder rows with your registered courses.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="data-table">
+            <caption class="visually-hidden">Courses registered this semester</caption>
+            <thead>
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Course title</th>
+                <th scope="col">Units</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Code">COS 106</td>
+                <td data-label="Course title">Introduction to Web Technologies</td>
+                <td data-label="Units">[ ]</td>
+                <td data-label="Status"><span class="badge badge-blue">In progress</span></td>
+              </tr>
+              <tr>
+                <td data-label="Code">[Code]</td>
+                <td data-label="Course title">[Course title]</td>
+                <td data-label="Units">[ ]</td>
+                <td data-label="Status"><span class="badge badge-blue">In progress</span></td>
+              </tr>
+              <tr>
+                <td data-label="Code">[Code]</td>
+                <td data-label="Course title">[Course title]</td>
+                <td data-label="Units">[ ]</td>
+                <td data-label="Status"><span class="badge badge-blue">In progress</span></td>
+              </tr>
+              <tr>
+                <td data-label="Code">[Code]</td>
+                <td data-label="Course title">[Course title]</td>
+                <td data-label="Units">[ ]</td>
+                <td data-label="Status"><span class="badge badge-blue">In progress</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="2">Total units</th>
+                <td colspan="2">[ ]</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Hobbies and interests ===== -->
+    <section class="section" id="interests" aria-labelledby="interests-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow eyebrow-dark">Hobbies &amp; interests</p>
+          <h2 id="interests-title">Outside the classroom</h2>
+          <p class="muted">A few things I enjoy when I'm not studying.</p>
+        </div>
+        <!-- EDIT: replace with your own hobbies -->
+        <ul class="interest-list reveal">
+          <li><span class="interest-icon" aria-hidden="true">◆</span><div><h3>[Hobby one]</h3><p>[Why you enjoy it.]</p></div></li>
+          <li><span class="interest-icon" aria-hidden="true">◆</span><div><h3>[Hobby two]</h3><p>[Why you enjoy it.]</p></div></li>
+          <li><span class="interest-icon" aria-hidden="true">◆</span><div><h3>[Interest three]</h3><p>[Why you enjoy it.]</p></div></li>
+          <li><span class="interest-icon" aria-hidden="true">◆</span><div><h3>[Interest four]</h3><p>[Why you enjoy it.]</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Multimedia ===== -->
+    <section class="section section-dark" id="audio" aria-labelledby="audio-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">Multimedia</p>
+          <h2 id="audio-title">Audio introduction</h2>
+          <p>
+            Press play to listen. The current file is a short placeholder chime created for this project.
+            Replace <code>media/intro.wav</code> with a recording of yourself introducing who you are.
+          </p>
+        </div>
+        <figure class="media-card reveal">
+          <audio controls preload="metadata">
+            <source src="media/intro.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            <a href="media/intro.wav">Download the audio file</a> instead.
+          </audio>
+          <figcaption>Audio introduction (placeholder, about 6 seconds)</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">YN</span><span class="brand-text">[Your Name]</span></a>
+        <p class="footer-note">COS 106 Introduction to Web Technologies term project, MIVA Open University.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">GitHub repository</a></li>
+        <li><a href="https://miva.university" target="_blank" rel="noopener">MIVA Open University</a></li>
+      </ul>
+    </div>
+    <p class="container copyright">© <span class="js-year">2026</span> [Your Full Name]. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

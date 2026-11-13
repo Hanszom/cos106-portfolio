@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive academic planner: add, complete and delete study tasks.">
+  <title>Academic Planner | [Your Full Name] — Student Portfolio</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">YN</span>
+        <span class="brand-text">[Your Name]</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Toggle menu</span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html" aria-current="page">Planner</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-sm">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero page-hero-compact">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container page-hero-inner reveal">
+        <p class="eyebrow">Academic planner</p>
+        <h1>Plan your coursework. Tick it off.</h1>
+        <p class="lead">Add assignments, readings and revision sessions. Tasks are saved in this browser, so they are still here when you come back.</p>
+      </div>
+    </section>
+
+    <section class="section planner-section" aria-label="Planner">
+      <div class="container planner-layout">
+
+        <!-- ===== Add task form ===== -->
+        <aside class="panel planner-form-panel">
+          <h2 class="panel-title">Add a task</h2>
+          <form id="task-form" class="form" novalidate>
+            <div class="field">
+              <label for="task-title">Task <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="task-title" name="title" maxlength="120" placeholder="e.g. Finish COS 106 term project" required aria-describedby="task-title-error">
+              <p class="field-error" id="task-title-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="task-course">Course</label>
+              <input type="text" id="task-course" name="course" maxlength="40" placeholder="e.g. COS 106" list="course-options">
+              <datalist id="course-options">
+                <option value="COS 106"></option>
+                <option value="General"></option>
+              </datalist>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="task-due">Due date</label>
+                <input type="date" id="task-due" name="due">
+              </div>
+              <div class="field">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" name="priority">
+                  <option value="low">Low</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="high">High</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add task</button>
+          </form>
+        </aside>
+
+        <!-- ===== Task list ===== -->
+        <div class="panel planner-list-panel">
+          <div class="stats" aria-live="polite">
+            <div class="stat"><span class="stat-value" id="stat-total">0</span><span class="stat-label">Total</span></div>
+            <div class="stat"><span class="stat-value" id="stat-active">0</span><span class="stat-label">To do</span></div>
+            <div class="stat"><span class="stat-value" id="stat-done">0</span><span class="stat-label">Completed</span></div>
+          </div>
+          <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+          <p class="progress-text muted" id="progress-text">No tasks yet.</p>
+
+          <div class="list-toolbar">
+            <div class="filter-bar" role="group" aria-label="Filter tasks">
+              <button type="button" class="filter-btn is-active" data-task-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="filter-btn" data-task-filter="active" aria-pressed="false">To do</button>
+              <button type="button" class="filter-btn" data-task-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm" id="clear-completed">Clear completed</button>
+          </div>
+
+          <ul class="task-list" id="task-list" aria-label="Tasks"></ul>
+          <div class="empty-state" id="empty-state">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm-2 8h14v10H5V10Z"/></svg>
+            <p id="empty-message">No tasks yet. Add your first task using the form.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Weekly study timetable (table) ===== -->
+    <section class="section section-alt" aria-labelledby="timetable-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Weekly routine</p>
+          <h2 id="timetable-title">Study timetable</h2>
+          <p class="muted">A suggested weekly plan. Edit the cells to match your own schedule.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="data-table timetable">
+            <caption class="visually-hidden">Weekly study timetable</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Morning</th>
+                <th scope="col">Afternoon</th>
+                <th scope="col">Evening</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Monday</th><td data-label="Morning">COS 106 lectures</td><td data-label="Afternoon">[Course]</td><td data-label="Evening">Review notes</td></tr>
+              <tr><th scope="row">Tuesday</th><td data-label="Morning">[Course]</td><td data-label="Afternoon">HTML practice</td><td data-label="Evening">Reading</td></tr>
+              <tr><th scope="row">Wednesday</th><td data-label="Morning">[Course]</td><td data-label="Afternoon">CSS practice</td><td data-label="Evening">Rest</td></tr>
+              <tr><th scope="row">Thursday</th><td data-label="Morning">[Course]</td><td data-label="Afternoon">JavaScript practice</td><td data-label="Evening">Assignments</td></tr>
+              <tr><th scope="row">Friday</th><td data-label="Morning">[Course]</td><td data-label="Afternoon">Group study</td><td data-label="Evening">Free</td></tr>
+              <tr><th scope="row">Weekend</th><td data-label="Morning">Revision</td><td data-label="Afternoon">Project work</td><td data-label="Evening">Plan next week</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">YN</span><span class="brand-text">[Your Name]</span></a>
+        <p class="footer-note">COS 106 Introduction to Web Technologies term project, MIVA Open University.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">GitHub repository</a></li>
+        <li><a href="https://miva.university" target="_blank" rel="noopener">MIVA Open University</a></li>
+      </ul>
+    </div>
+    <p class="container copyright">© <span class="js-year">2026</span> [Your Full Name]. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sample web projects by [Your Full Name].">
+  <title>Projects | [Your Full Name] — Student Portfolio</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">YN</span>
+        <span class="brand-text">[Your Name]</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Toggle menu</span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-sm">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container page-hero-inner reveal">
+        <p class="eyebrow">Projects</p>
+        <h1>Things I've built while learning.</h1>
+        <p class="lead">Each project lists what it does, the technologies used and a link. Links marked <em>simulated</em> are placeholders for work that is not published yet.</p>
+        <div class="filter-bar" role="group" aria-label="Filter projects">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="html" aria-pressed="false">HTML &amp; CSS</button>
+          <button type="button" class="filter-btn" data-filter="js" aria-pressed="false">JavaScript</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Project list">
+      <div class="container">
+        <p class="filter-status muted" aria-live="polite"></p>
+        <div class="project-list">
+
+          <!-- Project 1 — real, live link -->
+          <article class="project-card reveal" data-tags="html js">
+            <figure class="project-media">
+              <img src="images/project-portfolio.svg" alt="Screenshot-style illustration of the student portfolio homepage" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <span class="badge badge-green">Live</span>
+              <h2>Student Portfolio Website</h2>
+              <p>This website. A responsive, five-page portfolio built for the COS 106 term project with semantic HTML, one external stylesheet and vanilla JavaScript.</p>
+              <ul class="tag-list tag-list-sm">
+                <li>HTML5</li><li>CSS Grid</li><li>Flexbox</li><li>JavaScript</li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn btn-primary btn-sm" href="index.html">View live site</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">Source on GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 — real, links to the planner page -->
+          <article class="project-card reveal" data-tags="js">
+            <figure class="project-media">
+              <img src="images/project-planner.svg" alt="Illustration of the academic planner with a task list and progress bar" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <span class="badge badge-green">Live</span>
+              <h2>Academic Planner</h2>
+              <p>A task manager for coursework. Users add tasks with a course and due date, mark them complete, filter them and delete them. Tasks are stored in the browser with <code>localStorage</code>.</p>
+              <ul class="tag-list tag-list-sm">
+                <li>JavaScript arrays</li><li>DOM manipulation</li><li>localStorage</li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn btn-primary btn-sm" href="planner.html">Try the planner</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/Hanszom/cos106-portfolio/blob/main/js/script.js" target="_blank" rel="noopener">View the code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 — sample / simulated link. EDIT: replace with your own project -->
+          <article class="project-card reveal" data-tags="html">
+            <figure class="project-media">
+              <img src="images/project-events.svg" alt="Illustration of a campus events board layout with event cards" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <span class="badge badge-amber">Sample project</span>
+              <h2>Campus Events Board (concept)</h2>
+              <p>A planned single-page layout that lists upcoming student events as cards in a responsive grid. This is a sample entry. Replace it with a project of your own.</p>
+              <ul class="tag-list tag-list-sm">
+                <li>HTML5</li><li>CSS Grid</li><li>Media queries</li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn btn-primary btn-sm js-simulated" href="#simulated-demo" aria-describedby="sim-note-3">Live demo (simulated)</a>
+                <a class="btn btn-outline btn-sm js-simulated" href="#simulated-code" aria-describedby="sim-note-3">Source (simulated)</a>
+              </div>
+              <p class="sim-note" id="sim-note-3" hidden>This is a simulated link. The project has not been published yet.</p>
+            </div>
+          </article>
+
+          <!-- Project 4 — contact form -->
+          <article class="project-card reveal" data-tags="html js">
+            <figure class="project-media">
+              <img src="images/project-form.svg" alt="Illustration of a contact form showing validation messages" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <span class="badge badge-green">Live</span>
+              <h2>Validated Contact Form</h2>
+              <p>A contact form that checks every field before submission: no empty fields, a correctly formatted email address and a phone number made only of digits. Errors appear next to each field.</p>
+              <ul class="tag-list tag-list-sm">
+                <li>HTML forms</li><li>Regular expressions</li><li>Accessibility</li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn btn-primary btn-sm" href="contact.html">Open the form</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner reveal">
+        <div>
+          <h2>Want to see how these were made?</h2>
+          <p>All the code for this site is public on GitHub.</p>
+        </div>
+        <a class="btn btn-light" href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">Browse the repository</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">YN</span><span class="brand-text">[Your Name]</span></a>
+        <p class="footer-note">COS 106 Introduction to Web Technologies term project, MIVA Open University.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">GitHub repository</a></li>
+        <li><a href="https://miva.university" target="_blank" rel="noopener">MIVA Open University</a></li>
+      </ul>
+    </div>
+    <p class="container copyright">© <span class="js-year">2026</span> [Your Full Name]. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
