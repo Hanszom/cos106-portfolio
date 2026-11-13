@@ -1,5 +1,5 @@
 .DS_Store
 .claude/
 
-# Large video recordings: not published until converted to a web-friendly size
+# Original phone recording (86 MB, HEVC). The web version is media/appdemo.mp4
 /appdemo.mp4

@@ -14,7 +14,7 @@ A responsive, five-page student portfolio built with plain **HTML5, CSS3 and van
 | Page | File | Contents |
 |---|---|---|
 | Home | `index.html` | Name, photograph, welcome message, navigation, short biography, links to every section |
-| About | `about.html` | Education timeline, career aspirations, transferable and technical skills, COS 106 project table, interests, audio clip |
+| About | `about.html` | Education timeline, career aspirations, transferable and technical skills, COS 106 project table, interests, PublishPilot demonstration video |
 | Projects | `projects.html` | BookIntel (in development), PublishPilot (prototype) and this portfolio, each with an image, description, status and links where they exist |
 | Planner | `planner.html` | Interactive task manager (add, complete, delete, filter, clear completed) with localStorage, plus a weekly study timetable |
 | Contact | `contact.html` | Contact form (name, email, phone, message) with JavaScript validation |
@@ -33,19 +33,21 @@ cos106-portfolio/
 ├── js/
 │   └── script.js          one script for every page (each feature checks its page)
 ├── images/
-│   ├── profile-placeholder.svg   shown until you add images/profile.jpg
+│   ├── profile.jpg               homepage photograph
+│   ├── profile-placeholder.svg   fallback if the photograph fails to load
 │   ├── project-*.svg             project illustrations
+│   ├── appdemo-poster.jpg        preview frame shown before the video plays
 │   └── favicon.svg
 ├── media/
-│   └── intro.wav          placeholder audio clip
+│   └── appdemo.mp4        PublishPilot demonstration video (H.264, 444×960, about 12 MB)
 └── README.md
 ```
 
 ## Personalising the site
 
-The site is fully personalised, including the photograph (`images/profile.jpg`) and the long-term career goal in `about.html`. One optional item remains:
+The site is fully personalised: photograph (`images/profile.jpg`), education, long-term career goal and a demonstration video of PublishPilot.
 
-- **Audio:** `media/intro.wav` is a placeholder chime. Replace it with a short recording of yourself (keep the same file name, or update the `<source>` in `about.html`). To use MP3, change `type="audio/wav"` to `type="audio/mpeg"`.
+**Replacing the video:** keep it in `media/appdemo.mp4` and use the H.264 (AVC) format with AAC audio, which plays in every modern browser. Phone screen recordings are usually HEVC and very large, so convert them first and keep the file well under GitHub's 50 MB warning size (this one is about 12 MB). Update the poster image `images/appdemo-poster.jpg` and the caption in `about.html` to match.
 
 To check for any bracketed placeholders left in page text:
 
@@ -158,7 +160,7 @@ GitHub Pages republishes automatically within a minute or two.
 | Images | Profile photo, project images, SVG icons; every image has `alt` text |
 | Hyperlinks | Internal navigation, in-page anchors (`about.html` chips), external links, `mailto:` link |
 | Lists | Navigation menus (`ul`), education timeline (`ol`), skills, interests, contact details, footer links |
-| Multimedia | `<audio controls>` in `about.html#audio` with fallback text and a download link |
+| Multimedia | `<video controls>` in `about.html#demo`: no autoplay, poster image, `playsinline`, responsive sizing, caption, fallback text and a download link |
 
 ### CSS requirements
 
@@ -190,7 +192,7 @@ GitHub Pages republishes automatically within a minute or two.
 - Contact form: an empty submit shows four messages. An invalid email, a phone number with letters, spaces or symbols, and a phone number that is too short are each rejected with a specific message. A valid submission shows a success message and clears the form.
 - Responsive layout checked at 360px and 375px (mobile), 768px and 1024px (tablet) and 1280px (desktop) with no horizontal scrolling. The mobile menu opens and closes.
 - Planner form: the Due date and Priority controls never overlap. They sit side by side when there is room and stack when the panel is narrow.
-- The audio element loads and shows playback controls.
+- The demonstration video loads, plays, pauses and seeks with its controls. It fits the screen at 360px, 375px and desktop widths without overflowing.
 
 ## Notes
 

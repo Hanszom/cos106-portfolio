@@ -47,7 +47,7 @@
           <a href="#skills">Skills</a>
           <a href="#coursework">COS 106 project</a>
           <a href="#interests">Interests</a>
-          <a href="#audio">Audio intro</a>
+          <a href="#demo">App demo</a>
         </nav>
       </div>
     </section>
@@ -186,7 +186,7 @@
               </tr>
               <tr>
                 <td data-label="Page"><a href="about.html">About</a></td>
-                <td data-label="What it demonstrates">Education, career goals, skills, interests, a table and audio</td>
+                <td data-label="What it demonstrates">Education, career goals, skills, interests, a table and a video</td>
                 <td data-label="Status"><span class="badge badge-green">Built</span></td>
               </tr>
               <tr>
@@ -231,24 +231,30 @@
       </div>
     </section>
 
-    <!-- ===== Multimedia ===== -->
-    <section class="section section-dark" id="audio" aria-labelledby="audio-title">
+    <!-- ===== Multimedia: app demonstration video ===== -->
+    <section class="section section-dark" id="demo" aria-labelledby="demo-title">
       <div class="container split">
         <div class="reveal">
           <p class="eyebrow">Multimedia</p>
-          <h2 id="audio-title">Audio introduction</h2>
+          <h2 id="demo-title">App demonstration: PublishPilot</h2>
           <p>
-            Press play to listen. The current file is a short placeholder chime created for this project.
-            Replace <code>media/intro.wav</code> with a recording of yourself introducing who you are.
+            A screen recording of me testing my PublishPilot prototype on a phone. PublishPilot is a
+            book launch auditor for independent authors, described on my <a class="text-link-light" href="projects.html">Projects page</a>.
           </p>
+          <p class="demo-list-title">In the recording</p>
+          <ul class="demo-list">
+            <li>The example audit and overall score on the welcome screen</li>
+            <li>Creating an account</li>
+            <li>Adding a new book with its listing details</li>
+            <li>The book's Fixes and AI Tools screens</li>
+          </ul>
         </div>
-        <figure class="media-card reveal">
-          <audio controls preload="metadata">
-            <source src="media/intro.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            <a href="media/intro.wav">Download the audio file</a> instead.
-          </audio>
-          <figcaption>Audio introduction (placeholder, about 6 seconds)</figcaption>
+        <figure class="media-card media-card-video reveal">
+          <video controls preload="metadata" playsinline poster="images/appdemo-poster.jpg" width="444" height="960">
+            <source src="media/appdemo.mp4" type="video/mp4">
+            <p>Your browser cannot play this video. <a href="media/appdemo.mp4">Download the PublishPilot demonstration (MP4, 12 MB)</a> instead.</p>
+          </video>
+          <figcaption>PublishPilot prototype demonstration, recorded on a phone (about 2 minutes 35 seconds).</figcaption>
         </figure>
       </div>
     </section>
