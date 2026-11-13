@@ -1,6 +1,8 @@
 # COS 106 Student Portfolio and Academic Management Website
 
-Practical term project for **COS 106: Introduction to Web Technologies**, MIVA Open University.
+Practical term project for **COS 106: Introduction to Web Technologies**, Miva Open University.
+
+Built by **Oluwatobiloba Adeleke**, Computing Science student.
 
 A responsive, five-page student portfolio built with plain **HTML5, CSS3 and vanilla JavaScript**: no frameworks, no build step. It runs directly in a browser and is hosted with GitHub Pages.
 
@@ -12,8 +14,8 @@ A responsive, five-page student portfolio built with plain **HTML5, CSS3 and van
 | Page | File | Contents |
 |---|---|---|
 | Home | `index.html` | Name, photograph, welcome message, navigation, short biography, links to every section |
-| About | `about.html` | Education timeline, career aspirations, technical skills, course table, hobbies, audio clip |
-| Projects | `projects.html` | Four sample projects with images, descriptions, tech tags, real and simulated links, filter buttons |
+| About | `about.html` | Education timeline, career aspirations, transferable and technical skills, COS 106 project table, interests, audio clip |
+| Projects | `projects.html` | BookIntel (in development), PublishPilot (prototype) and this portfolio, each with an image, description, status and links where they exist |
 | Planner | `planner.html` | Interactive task manager (add, complete, delete, filter, clear completed) with localStorage, plus a weekly study timetable |
 | Contact | `contact.html` | Contact form (name, email, phone, message) with JavaScript validation |
 
@@ -41,19 +43,17 @@ cos106-portfolio/
 
 ## Personalising the site
 
-Every placeholder is written in square brackets, for example `[Your Full Name]`. To list them all, run this in the project folder:
-
-```bash
-grep -rn "\[" --include=*.html .
-```
+The site is personalised. What is still left for you:
 
 1. **Photograph:** save your photo as `images/profile.jpg`. It replaces the placeholder on the homepage automatically. A portrait-shaped image of about 800 × 950 pixels works best.
-2. **Name:** replace `[Your Full Name]` and `[Your Name]` in all five HTML files. Also replace the initials `YN` in the logo (`brand-mark`) with yours.
-3. **Biography, education, career goals, skills, hobbies:** edit the bracketed text in `index.html` and `about.html`. Look for `<!-- EDIT: -->` comments.
-4. **Courses table:** fill in your course codes, titles and units in `about.html`.
-5. **Contact details:** replace `your.email@example.com` and `[City, Country]` in `contact.html`.
-6. **Audio:** replace `media/intro.wav` with a short recording of yourself (keep the same file name, or update the `<source>` in `about.html`). To use MP3, change `type="audio/wav"` to `type="audio/mpeg"`.
-7. **Project 3:** "Campus Events Board" is a sample entry with simulated links. Replace it with your own project, or keep it clearly labelled as a sample.
+2. **Long-term career goal:** replace the two bracketed lines in the "Long term" card in `about.html` (search for `<!-- EDIT:`).
+3. **Audio:** `media/intro.wav` is a placeholder chime. Replace it with a short recording of yourself (keep the same file name, or update the `<source>` in `about.html`). To use MP3, change `type="audio/wav"` to `type="audio/mpeg"`.
+
+To check for any bracketed placeholders left in page text:
+
+```bash
+grep -no '>\[[^]<]*\]<' *.html
+```
 
 ## Running locally
 
@@ -136,10 +136,10 @@ GitHub Pages republishes automatically within a minute or two.
 | About: career aspirations | `about.html#career`, short, medium and long-term goal cards |
 | About: technical skills | `about.html#skills`, grouped skill tag lists |
 | About: hobbies and interests | `about.html#interests` |
-| Projects: at least three sample projects | `projects.html`: four `<article>` project cards |
-| Projects: descriptions | A paragraph and technology tags on each card |
+| Projects: at least three sample projects | `projects.html`: three `<article>` project cards (BookIntel, PublishPilot, this portfolio) |
+| Projects: descriptions | A summary, a list of what is built and what is not, and technology tags on each card |
 | Projects: images or screenshots | `images/project-*.svg` on each card |
-| Projects: links (real or simulated) | Real links to the live pages and GitHub, plus clearly labelled simulated links (project 3) that show a notice when clicked |
+| Projects: links (real or simulated) | Working internal links (planner, contact form) and the GitHub repository. BookIntel and PublishPilot are not public yet, so their cards say so instead of showing invented links |
 | Planner: add tasks | `planner.html` form → `addTask()` in `js/script.js` |
 | Planner: mark tasks completed | Checkbox on each task → `toggleTask()` |
 | Planner: delete tasks | Bin button on each task → `deleteTask()`; also "Clear completed" → `clearCompleted()` |
@@ -156,7 +156,7 @@ GitHub Pages republishes automatically within a minute or two.
 |---|---|
 | Semantic elements | `header`, `nav`, `main`, `section`, `article`, `aside`, `figure`, `figcaption`, `footer` on every page |
 | Forms | Planner task form (`planner.html`), contact form (`contact.html`) with labels, `input`, `select`, `textarea`, `datalist` |
-| Tables | Course table with `thead`, `tbody`, `tfoot` and `caption` (`about.html`); weekly study timetable (`planner.html`) |
+| Tables | COS 106 project table with `thead`, `tbody`, `tfoot` and `caption` (`about.html`); weekly study timetable (`planner.html`) |
 | Images | Profile photo, project images, SVG icons; every image has `alt` text |
 | Hyperlinks | Internal navigation, in-page anchors (`about.html` chips), external links, `mailto:` link |
 | Lists | Navigation menus (`ul`), education timeline (`ol`), skills, interests, contact details, footer links |
@@ -181,7 +181,7 @@ GitHub Pages republishes automatically within a minute or two.
 | Event handling | `click`, `submit`, `change`, `input`, `blur`, `keydown` and `scroll` listeners; event delegation on the task list |
 | DOM manipulation | `createTaskElement()` builds tasks with `createElement`; stats, progress bar, error messages and success message are updated live |
 | Form validation | `initContactForm()` and the planner's empty-task check |
-| Dynamic content updates | `renderTasks()`, `updateStats()`, project filter, simulated-link notice, footer year |
+| Dynamic content updates | `renderTasks()`, `updateStats()`, task filter, live validation messages, footer year |
 | Arrays and functions | `tasks` array with `map`, `filter`, `forEach` and `unshift`; named functions for each operation |
 | Interactive task management | Add, complete, delete, filter and clear completed, saved in `localStorage` |
 

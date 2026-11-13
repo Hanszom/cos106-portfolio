@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sample web projects by [Your Full Name].">
-  <title>Projects | [Your Full Name] — Student Portfolio</title>
+  <meta name="description" content="Projects by Oluwatobiloba Adeleke: BookIntel, PublishPilot and this student portfolio.">
+  <title>Projects | Oluwatobiloba Adeleke — Student Portfolio</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +17,8 @@
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true">YN</span>
-        <span class="brand-text">[Your Name]</span>
+        <span class="brand-mark" aria-hidden="true">OA</span>
+        <span class="brand-text">Oluwatobiloba Adeleke</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
         <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
@@ -39,93 +39,98 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container page-hero-inner reveal">
         <p class="eyebrow">Projects</p>
-        <h1>Things I've built while learning.</h1>
-        <p class="lead">Each project lists what it does, the technologies used and a link. Links marked <em>simulated</em> are placeholders for work that is not published yet.</p>
-        <div class="filter-bar" role="group" aria-label="Filter projects">
-          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="filter-btn" data-filter="html" aria-pressed="false">HTML &amp; CSS</button>
-          <button type="button" class="filter-btn" data-filter="js" aria-pressed="false">JavaScript</button>
-        </div>
+        <h1>Things I'm building.</h1>
+        <p class="lead">Three projects, each with an honest status: what is built, what is still a concept, and where you can try it.</p>
       </div>
     </section>
 
     <section class="section" aria-label="Project list">
       <div class="container">
-        <p class="filter-status muted" aria-live="polite"></p>
         <div class="project-list">
 
-          <!-- Project 1 — real, live link -->
-          <article class="project-card reveal" data-tags="html js">
+          <!-- Project 1: BookIntel (in development, no public URL) -->
+          <article class="project-card reveal">
             <figure class="project-media">
-              <img src="images/project-portfolio.svg" alt="Screenshot-style illustration of the student portfolio homepage" width="800" height="500" loading="lazy">
+              <img src="images/project-bookintel.svg" alt="Illustration of a manuscript page beside a panel of measurements such as chapters, words, readability and repetition" width="800" height="500" loading="lazy">
             </figure>
             <div class="project-body">
-              <span class="badge badge-green">Live</span>
-              <h2>Student Portfolio Website</h2>
-              <p>This website. A responsive, five-page portfolio built for the COS 106 term project with semantic HTML, one external stylesheet and vanilla JavaScript.</p>
+              <span class="badge badge-amber">In development</span>
+              <h2>BookIntel</h2>
+              <p>An AI-assisted book intelligence platform concept. It is designed to help independent authors analyse a manuscript and receive an evidence-based report to support editing and publishing decisions.</p>
+              <div class="project-detail">
+                <h3>Built so far</h3>
+                <ul class="check-list">
+                  <li>Account sign-in</li>
+                  <li>Uploading a Word (DOCX) manuscript and extracting its text</li>
+                  <li>Chapter detection from the manuscript's headings</li>
+                  <li>A measurement layer that calculates figures such as word counts, readability and repetition, which every future report finding must cite</li>
+                </ul>
+                <h3>Not built yet</h3>
+                <ul class="check-list check-list-pending">
+                  <li>The AI-written manuscript reports</li>
+                </ul>
+              </div>
+              <ul class="tag-list tag-list-sm">
+                <li>Next.js</li><li>TypeScript</li><li>Supabase</li>
+              </ul>
+              <p class="status-note">Not launched yet, so there is no public link.</p>
+            </div>
+          </article>
+
+          <!-- Project 2: PublishPilot (front-end prototype, no public URL) -->
+          <article class="project-card reveal">
+            <figure class="project-media">
+              <img src="images/project-publishpilot.svg" alt="Illustration of a book audit report with an overall score ring, category score bars and prioritised findings" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <span class="badge badge-blue">Prototype</span>
+              <h2>PublishPilot</h2>
+              <p>A book launch auditor for independent authors, built as a front-end prototype in a single HTML file. It shows how an author could check what to improve in a book's online listing.</p>
+              <div class="project-detail">
+                <h3>What the prototype does</h3>
+                <ul class="check-list">
+                  <li>Landing page explaining the audit process</li>
+                  <li>Form for a book's title, author and Amazon book URL</li>
+                  <li>Dashboard of audited books, saved in the browser with localStorage</li>
+                  <li>Sample audit report with an overall score, nine category scores and three prioritised findings</li>
+                </ul>
+                <h3>Simulated for now</h3>
+                <ul class="check-list check-list-pending">
+                  <li>Scores, findings and "Improve this" suggestions are fixed sample content. The prototype does not yet read a real listing or use an AI service.</li>
+                </ul>
+              </div>
+              <ul class="tag-list tag-list-sm">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>localStorage</li>
+              </ul>
+              <p class="status-note">Not published online yet, so there is no public link.</p>
+            </div>
+          </article>
+
+          <!-- Project 3: this site -->
+          <article class="project-card reveal">
+            <figure class="project-media">
+              <img src="images/project-portfolio.svg" alt="Illustration of this student portfolio's homepage" width="800" height="500" loading="lazy">
+            </figure>
+            <div class="project-body">
+              <span class="badge badge-green">COS 106 project</span>
+              <h2>Student Portfolio and Academic Planner</h2>
+              <p>This website, built for the COS 106 practical term project with plain HTML5, one external stylesheet and vanilla JavaScript. No frameworks.</p>
+              <div class="project-detail">
+                <h3>Features</h3>
+                <ul class="check-list">
+                  <li>Five linked pages with a responsive navigation menu</li>
+                  <li>Academic planner: add, complete, filter and delete tasks, saved with localStorage</li>
+                  <li>Contact form validation for empty fields, email format and digits-only phone numbers</li>
+                  <li>Semantic HTML, tables, images and an audio element</li>
+                </ul>
+              </div>
               <ul class="tag-list tag-list-sm">
                 <li>HTML5</li><li>CSS Grid</li><li>Flexbox</li><li>JavaScript</li>
               </ul>
               <div class="btn-row">
-                <a class="btn btn-primary btn-sm" href="index.html">View live site</a>
-                <a class="btn btn-outline btn-sm" href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">Source on GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2 — real, links to the planner page -->
-          <article class="project-card reveal" data-tags="js">
-            <figure class="project-media">
-              <img src="images/project-planner.svg" alt="Illustration of the academic planner with a task list and progress bar" width="800" height="500" loading="lazy">
-            </figure>
-            <div class="project-body">
-              <span class="badge badge-green">Live</span>
-              <h2>Academic Planner</h2>
-              <p>A task manager for coursework. Users add tasks with a course and due date, mark them complete, filter them and delete them. Tasks are stored in the browser with <code>localStorage</code>.</p>
-              <ul class="tag-list tag-list-sm">
-                <li>JavaScript arrays</li><li>DOM manipulation</li><li>localStorage</li>
-              </ul>
-              <div class="btn-row">
                 <a class="btn btn-primary btn-sm" href="planner.html">Try the planner</a>
-                <a class="btn btn-outline btn-sm" href="https://github.com/Hanszom/cos106-portfolio/blob/main/js/script.js" target="_blank" rel="noopener">View the code</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3 — sample / simulated link. EDIT: replace with your own project -->
-          <article class="project-card reveal" data-tags="html">
-            <figure class="project-media">
-              <img src="images/project-events.svg" alt="Illustration of a campus events board layout with event cards" width="800" height="500" loading="lazy">
-            </figure>
-            <div class="project-body">
-              <span class="badge badge-amber">Sample project</span>
-              <h2>Campus Events Board (concept)</h2>
-              <p>A planned single-page layout that lists upcoming student events as cards in a responsive grid. This is a sample entry. Replace it with a project of your own.</p>
-              <ul class="tag-list tag-list-sm">
-                <li>HTML5</li><li>CSS Grid</li><li>Media queries</li>
-              </ul>
-              <div class="btn-row">
-                <a class="btn btn-primary btn-sm js-simulated" href="#simulated-demo" aria-describedby="sim-note-3">Live demo (simulated)</a>
-                <a class="btn btn-outline btn-sm js-simulated" href="#simulated-code" aria-describedby="sim-note-3">Source (simulated)</a>
-              </div>
-              <p class="sim-note" id="sim-note-3" hidden>This is a simulated link. The project has not been published yet.</p>
-            </div>
-          </article>
-
-          <!-- Project 4 — contact form -->
-          <article class="project-card reveal" data-tags="html js">
-            <figure class="project-media">
-              <img src="images/project-form.svg" alt="Illustration of a contact form showing validation messages" width="800" height="500" loading="lazy">
-            </figure>
-            <div class="project-body">
-              <span class="badge badge-green">Live</span>
-              <h2>Validated Contact Form</h2>
-              <p>A contact form that checks every field before submission: no empty fields, a correctly formatted email address and a phone number made only of digits. Errors appear next to each field.</p>
-              <ul class="tag-list tag-list-sm">
-                <li>HTML forms</li><li>Regular expressions</li><li>Accessibility</li>
-              </ul>
-              <div class="btn-row">
-                <a class="btn btn-primary btn-sm" href="contact.html">Open the form</a>
+                <a class="btn btn-outline btn-sm" href="contact.html">Test the contact form</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">Source on GitHub</a>
               </div>
             </div>
           </article>
@@ -137,8 +142,8 @@
     <section class="cta-band">
       <div class="container cta-inner reveal">
         <div>
-          <h2>Want to see how these were made?</h2>
-          <p>All the code for this site is public on GitHub.</p>
+          <h2>Want to see how this site was made?</h2>
+          <p>All the code for this portfolio is public on GitHub.</p>
         </div>
         <a class="btn btn-light" href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">Browse the repository</a>
       </div>
@@ -148,8 +153,8 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">YN</span><span class="brand-text">[Your Name]</span></a>
-        <p class="footer-note">COS 106 Introduction to Web Technologies term project, MIVA Open University.</p>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">OA</span><span class="brand-text">Oluwatobiloba Adeleke</span></a>
+        <p class="footer-note">COS 106 Introduction to Web Technologies term project, Miva Open University.</p>
       </div>
       <nav aria-label="Footer navigation">
         <ul class="footer-links">
@@ -162,10 +167,10 @@
       </nav>
       <ul class="footer-links">
         <li><a href="https://github.com/Hanszom/cos106-portfolio" target="_blank" rel="noopener">GitHub repository</a></li>
-        <li><a href="https://miva.university" target="_blank" rel="noopener">MIVA Open University</a></li>
+        <li><a href="https://miva.edu.ng" target="_blank" rel="noopener">Miva Open University</a></li>
       </ul>
     </div>
-    <p class="container copyright">© <span class="js-year">2026</span> [Your Full Name]. Built with HTML, CSS and JavaScript.</p>
+    <p class="container copyright">© <span class="js-year">2026</span> Oluwatobiloba Adeleke. Built with HTML, CSS and JavaScript.</p>
   </footer>
 
   <script src="js/script.js"></script>

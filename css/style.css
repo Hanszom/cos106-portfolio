@@ -508,13 +508,25 @@ a { color: var(--blue-600); }
 .timeline-place { margin: 0 0 6px; font-weight: 600; color: var(--ink-soft); }
 .timeline p:last-child { color: var(--muted); margin: 0; }
 
-.skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .skill-group {
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface);
 }
+.skill-group-wide { grid-column: 1 / -1; }
+.skill-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.skill-list li {
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  border-top: 3px solid var(--blue-500);
+  transition: transform 0.25s var(--ease), background-color 0.25s;
+}
+.skill-list li:hover { transform: translateY(-4px); background: var(--blue-100); }
+.skill-list strong { display: block; margin-bottom: 4px; }
+.skill-list span { display: block; font-size: 0.92rem; color: var(--muted); }
 
 .interest-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .interest-list li {
@@ -564,9 +576,8 @@ a { color: var(--blue-600); }
 .data-table tfoot th,
 .data-table tfoot td { font-weight: 800; border-bottom: 0; background: var(--surface-alt); }
 
-/* ---------- 10. Projects page ---------- */
+/* ---------- 10. Projects page (filter buttons are also used by the planner) ---------- */
 .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; }
-.page-hero .filter-bar { margin-top: 28px; }
 .filter-btn {
   padding: 8px 18px;
   border-radius: 999px;
@@ -581,10 +592,6 @@ a { color: var(--blue-600); }
 }
 .filter-btn:hover { border-color: var(--blue-400); color: var(--blue-600); }
 .filter-btn.is-active { background: var(--blue-600); border-color: var(--blue-600); color: #fff; }
-.page-hero .filter-btn { background: transparent; border-color: rgba(255, 255, 255, 0.25); color: #dfe5fb; }
-.page-hero .filter-btn.is-active { background: var(--blue-600); border-color: var(--blue-600); color: #fff; }
-
-.filter-status:empty { display: none; }
 
 .project-list { display: grid; gap: 32px; }
 .project-card {
@@ -600,7 +607,6 @@ a { color: var(--blue-600); }
 }
 .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .project-card:nth-child(even) .project-media { order: 2; }
-.project-card[hidden] { display: none; }
 
 .project-media { margin: 0; background: var(--navy-900); overflow: hidden; }
 .project-media img {
@@ -615,12 +621,31 @@ a { color: var(--blue-600); }
 .project-body p { margin: 0; color: var(--muted); }
 .project-body .btn-row { margin-top: 8px; }
 
-.sim-note {
+.project-detail { width: 100%; }
+.project-detail h3 { margin: 4px 0 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.check-list { list-style: none; display: grid; gap: 6px; margin-bottom: 12px; }
+.check-list li { position: relative; padding-left: 26px; font-size: 0.95rem; color: var(--ink-soft); }
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0; top: 1px;
+  display: grid; place-items: center;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--green-100);
+  color: #0d7a52;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+.check-list-pending li::before { content: "…"; background: var(--amber-100); color: #8a5500; }
+
+.status-note {
   margin: 0;
   padding: 10px 14px;
   border-radius: var(--radius-sm);
-  background: var(--amber-100);
-  color: #6e4400 !important;
+  background: var(--surface-alt);
+  border: 1px dashed #c3cbe0;
+  color: var(--ink-soft) !important;
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -902,6 +927,7 @@ a { color: var(--blue-600); }
   .section { padding: 72px 0; }
   .card-grid-3,
   .skills-grid { grid-template-columns: 1fr; }
+  .skill-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-card { grid-template-columns: 1fr; }
   .project-card:nth-child(even) .project-media { order: 0; }
   .project-media img { aspect-ratio: 16 / 10; height: auto; }
@@ -915,6 +941,7 @@ a { color: var(--blue-600); }
   .container { padding-inline: 16px; }
   .card-grid,
   .interest-list,
+  .skill-list,
   .field-row { grid-template-columns: 1fr; }
   .hero-facts { gap: 20px; }
   .panel { padding: 22px; }

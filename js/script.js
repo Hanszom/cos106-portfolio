@@ -5,9 +5,8 @@
 
    1. Site-wide: mobile navigation, header shadow, footer year,
       scroll-reveal animations
-   2. Projects page: filter buttons and simulated links
-   3. Planner page: add / complete / delete tasks (localStorage)
-   4. Contact page: form validation
+   2. Planner page: add / complete / delete tasks (localStorage)
+   3. Contact page: form validation
    ========================================================= */
 
 (function () {
@@ -84,56 +83,7 @@
   }
 
   /* -------------------------------------------------------
-     2. Projects page
-     ------------------------------------------------------- */
-
-  function initProjectFilter() {
-    var buttons = document.querySelectorAll("[data-filter]");
-    var cards = document.querySelectorAll(".project-card");
-    var status = document.querySelector(".filter-status");
-    if (!buttons.length || !cards.length) return;
-
-    buttons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        var filter = button.dataset.filter;
-        var shown = 0;
-
-        buttons.forEach(function (b) {
-          var active = b === button;
-          b.classList.toggle("is-active", active);
-          b.setAttribute("aria-pressed", String(active));
-        });
-
-        cards.forEach(function (card) {
-          var tags = card.dataset.tags.split(" ");
-          var match = filter === "all" || tags.indexOf(filter) !== -1;
-          card.hidden = !match;
-          if (match) {
-            shown++;
-            card.classList.add("is-visible");
-          }
-        });
-
-        if (status) {
-          status.textContent = filter === "all" ? "" :
-            "Showing " + shown + " of " + cards.length + " projects.";
-        }
-      });
-    });
-  }
-
-  function initSimulatedLinks() {
-    document.querySelectorAll(".js-simulated").forEach(function (link) {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
-        var note = document.getElementById(link.getAttribute("aria-describedby"));
-        if (note) note.hidden = false;
-      });
-    });
-  }
-
-  /* -------------------------------------------------------
-     3. Academic planner
+     2. Academic planner
      ------------------------------------------------------- */
 
   var STORAGE_KEY = "cos106-planner-tasks";
@@ -383,7 +333,7 @@
   }
 
   /* -------------------------------------------------------
-     4. Contact form validation
+     3. Contact form validation
      ------------------------------------------------------- */
 
   function initContactForm() {
@@ -488,8 +438,6 @@
   initHeaderShadow();
   initFooterYear();
   initReveal();
-  initProjectFilter();
-  initSimulatedLinks();
   initPlanner();
   initContactForm();
 })();
