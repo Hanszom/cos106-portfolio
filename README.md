@@ -43,11 +43,9 @@ cos106-portfolio/
 
 ## Personalising the site
 
-The site is personalised. What is still left for you:
+The site is fully personalised, including the photograph (`images/profile.jpg`) and the long-term career goal in `about.html`. One optional item remains:
 
-1. **Photograph:** save your photo as `images/profile.jpg`. It replaces the placeholder on the homepage automatically. A portrait-shaped image of about 800 × 950 pixels works best.
-2. **Long-term career goal:** replace the two bracketed lines in the "Long term" card in `about.html` (search for `<!-- EDIT:`).
-3. **Audio:** `media/intro.wav` is a placeholder chime. Replace it with a short recording of yourself (keep the same file name, or update the `<source>` in `about.html`). To use MP3, change `type="audio/wav"` to `type="audio/mpeg"`.
+- **Audio:** `media/intro.wav` is a placeholder chime. Replace it with a short recording of yourself (keep the same file name, or update the `<source>` in `about.html`). To use MP3, change `type="audio/wav"` to `type="audio/mpeg"`.
 
 To check for any bracketed placeholders left in page text:
 
@@ -190,11 +188,13 @@ GitHub Pages republishes automatically within a minute or two.
 - All five pages link to each other through the header and footer navigation. Every local image, script, stylesheet and media path loads.
 - Planner: an empty task is rejected with a message. Adding, completing, filtering (All, To do, Completed), deleting and clearing completed tasks all work. Tasks remain after a page reload. HTML typed into a task is shown as plain text.
 - Contact form: an empty submit shows four messages. An invalid email, a phone number with letters, spaces or symbols, and a phone number that is too short are each rejected with a specific message. A valid submission shows a success message and clears the form.
-- Responsive layout checked at 375px (mobile) and 1280px (desktop) with no horizontal scrolling. The mobile menu opens and closes.
+- Responsive layout checked at 360px and 375px (mobile), 768px and 1024px (tablet) and 1280px (desktop) with no horizontal scrolling. The mobile menu opens and closes.
+- Planner form: the Due date and Priority controls never overlap. They sit side by side when there is room and stack when the panel is narrow.
 - The audio element loads and shows playback controls.
 
 ## Notes
 
 - The contact form has **no backend**. It validates in the browser and shows a confirmation, but it does not send email.
 - Planner tasks are stored in the visitor's own browser (`localStorage`). They are not shared between devices.
+- AI assistance: I used Claude, an AI coding assistant, to help write, test and publish the code. I directed the project and supplied all personal and project details.
 - The design takes inspiration from modern VPN and SaaS landing pages (deep navy, vivid blue, rounded cards). All graphics and text are original.
