@@ -1,2 +1,5 @@
 .DS_Store
 .claude/
+
+# Large video recordings: not published until converted to a web-friendly size
+/appdemo.mp4
